@@ -50,4 +50,12 @@ class AdminController extends Controller
     public function index(){
     	echo 'this is admin index';
     }
+    public function logout(){
+    	Auth::logout();
+    	return Redirect::to($this->background);
+    }
+    public function loginas($userid){
+        Auth::loginUsingId($userid);
+        return Redirect::to($this->background);
+    }
 }

@@ -25,5 +25,6 @@ Route::group(['prefix'=>$background,'namespace'=>'Admin','middleware'=>['auth']]
 	Route::get('/test',function(){
 		echo 'nice';
 	});
+	Route::get('logout','AdminController@logout');
 	Route::resource('category','CategoryController');
 });
